@@ -51,7 +51,7 @@ export default function HomePage() {
               <Button
                 variant="outline"
                 size="lg"
-                className="rounded-full px-8 py-4 text-lg font-medium border-2 border-purple-200 dark:border-purple-700 text-purple-700 dark:text-purple-300 hover:bg-purple-50 dark:hover:bg-purple-900/20 shadow-lg hover:shadow-xl transition-all duration-300"
+                className="rounded-full px-8 py-4 text-lg font-medium border-2 border-purple-200 dark:border-purple-700 text-purple-700 dark:text-purple-300 hover:bg-purple-50 dark:hover:bg-purple-900/20 shadow-lg hover:shadow-xl transition-all duration-300 bg-transparent"
                 asChild
               >
                 <a href="#contact">
@@ -164,7 +164,7 @@ export default function HomePage() {
         <div className="container mx-auto">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-16 text-slate-900 dark:text-white">趣味</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Card className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-3xl shadow-xl border-0 overflow-hidden hover:shadow-2xl transition-all duration-300 group">
                 <CardHeader className="p-8 text-center">
                   <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-red-400 to-pink-500 dark:from-red-500 dark:to-pink-600 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -191,6 +191,21 @@ export default function HomePage() {
                   <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed text-center">
                     新しい場所を探索したり、自然の中をドライブすることでリフレッシュしています。
                     カリフォルニアの美しい景色を楽しんでいます。
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-3xl shadow-xl border-0 overflow-hidden hover:shadow-2xl transition-all duration-300 group">
+                <CardHeader className="p-8 text-center">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-amber-400 to-orange-500 dark:from-amber-500 dark:to-orange-600 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-3xl">☕</span>
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-slate-800 dark:text-slate-200">カフェ巡り</CardTitle>
+                </CardHeader>
+                <CardContent className="px-8 pb-8">
+                  <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed text-center">
+                    新しいカフェを訪れて、美味しいコーヒーと心地よい空間を楽しんでいます。
+                    勉強や読書の場所としても活用しています。
                   </p>
                 </CardContent>
               </Card>

@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "長山凌汰 | Ryota Nagayama",
   description: "UC Berkeley Environmental Economics & Policy学生の個人ホームページ",
-    generator: 'v0.dev'
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
