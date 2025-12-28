@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Github, ExternalLink, Mail, GraduationCap, Briefcase, Coffee, Car, Activity } from "lucide-react"
+import { Github, Mail, GraduationCap, Briefcase, Coffee, Car, Activity, Instagram } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function HomePage() {
@@ -211,24 +211,44 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Contact Section - ミニマルデザイン */}
+      {/* Contact Section - アイコンのみのシンプルなソーシャルリンク */}
       <section id="contact" className="py-16 md:py-24 px-4 md:px-6 bg-slate-900 dark:bg-black">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl font-semibold mb-4 text-white">Get in Touch</h2>
             <p className="text-lg mb-8 text-slate-400">お気軽にご連絡ください</p>
-            <Button
-              size="lg"
-              variant="outline"
-              className="rounded-lg px-8 py-4 text-base font-medium border-slate-700 text-white hover:bg-slate-800 transition-all duration-200 bg-transparent"
-              asChild
-            >
-              <a href="https://github.com/Ry0Nang" target="_blank" rel="noopener noreferrer">
-                <Github className="mr-2 h-5 w-5" />
-                github.com/Ry0Nang
-                <ExternalLink className="ml-2 h-4 w-4" />
+
+            <div className="flex items-center justify-center gap-6">
+              <a
+                href="https://github.com/Ry0Nang"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-14 h-14 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition-all duration-200 hover:scale-110"
+                aria-label="GitHub"
+              >
+                <Github className="h-6 w-6 text-white" />
               </a>
-            </Button>
+              <a
+                href="https://instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-14 h-14 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition-all duration-200 hover:scale-110"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-6 w-6 text-white" />
+              </a>
+              <a
+                href="https://x.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-14 h-14 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition-all duration-200 hover:scale-110"
+                aria-label="X (Twitter)"
+              >
+                <svg viewBox="0 0 24 24" className="h-6 w-6 text-white fill-current" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </section>
