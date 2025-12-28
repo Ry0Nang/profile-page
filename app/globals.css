@@ -68,67 +68,22 @@
   }
 }
 
-/* テーマプレビュー用のスタイル */
-[data-theme-preview="light"] {
-  color-scheme: light;
+/* スムーズなテーマ切り替えトランジション */
+html {
+  transition: color-scheme 0.3s ease;
 }
 
-[data-theme-preview="light"] * {
-  transition: all 0.3s ease;
-}
-
-[data-theme-preview="light"] .dark\:bg-slate-900 {
-  background: rgb(248 250 252) !important;
-}
-
-[data-theme-preview="light"] .dark\:via-purple-900 {
-  background: rgb(196 181 253) !important;
-}
-
-[data-theme-preview="light"] .dark\:to-slate-800 {
-  background: rgb(241 245 249) !important;
-}
-
-[data-theme-preview="light"] .dark\:text-white {
-  color: rgb(15 23 42) !important;
-}
-
-[data-theme-preview="light"] .dark\:text-slate-300 {
-  color: rgb(71 85 105) !important;
-}
-
-[data-theme-preview="light"] .dark\:bg-slate-800\/90 {
-  background: rgba(255, 255, 255, 0.9) !important;
-}
-
-[data-theme-preview="dark"] {
+html.dark {
   color-scheme: dark;
 }
 
-[data-theme-preview="dark"] * {
-  transition: all 0.3s ease;
+html:not(.dark) {
+  color-scheme: light;
 }
 
-[data-theme-preview="dark"] .bg-gradient-to-br.from-purple-50 {
-  background: linear-gradient(to bottom right, rgb(15 23 42), rgb(88 28 135), rgb(30 41 59)) !important;
-}
-
-[data-theme-preview="dark"] .text-slate-900 {
-  color: rgb(248 250 252) !important;
-}
-
-[data-theme-preview="dark"] .text-slate-700 {
-  color: rgb(203 213 225) !important;
-}
-
-[data-theme-preview="dark"] .bg-white\/90 {
-  background: rgba(30, 41, 59, 0.9) !important;
-}
-
-[data-theme-preview="dark"] .text-slate-800 {
-  color: rgb(226 232 240) !important;
-}
-
-[data-theme-preview="dark"] .bg-gradient-to-r.from-blue-50\/50 {
-  background: linear-gradient(to right, rgba(30, 41, 59, 0.5), rgba(88, 28, 135, 0.2)) !important;
+/* 全要素にトランジションを適用 */
+*,
+*::before,
+*::after {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.2s ease;
 }
