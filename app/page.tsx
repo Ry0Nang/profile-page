@@ -34,7 +34,7 @@ export default function HomePage() {
                 </div>
 
                 <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed max-w-xl">
-                  環境経済学と政策を学ぶ学生として、持続可能な未来の創造に貢献したいと考えています。
+                  環境経済学を専攻し、持続可能な未来の創造に貢献したいと考えています。
                 </p>
 
                 <div className="flex gap-4 justify-center md:justify-start flex-col sm:flex-row">
