@@ -1,16 +1,16 @@
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Github, Mail, GraduationCap, Briefcase, Coffee, Car, Activity, Instagram } from "lucide-react"
-import { ThemeToggle } from "@/components/theme-toggle"
+import { GraduationCap, Briefcase, Coffee, Car, Activity } from "lucide-react"
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 transition-colors duration-300">
-      <ThemeToggle />
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+      <Navigation />
 
-      {/* Hero Section - より洗練されたデザインに */}
-      <section className="py-20 md:py-32 px-4 md:px-6">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 md:pt-40 md:pb-32 px-4 md:px-6">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
@@ -36,11 +36,6 @@ export default function HomePage() {
                 <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed max-w-xl">
                   環境経済学を専攻し、持続可能な未来の創造に貢献したいと考えています。
                 </p>
-
-                <div className="flex gap-4 justify-center md:justify-start flex-col sm:flex-row">
-                  
-                  
-                </div>
               </div>
             </div>
           </div>
@@ -52,7 +47,7 @@ export default function HomePage() {
         <div className="h-px bg-slate-200 dark:bg-slate-800 max-w-4xl mx-auto" />
       </div>
 
-      {/* About Section - よりクリーンなレイアウト */}
+      {/* About Section */}
       <section id="about" className="py-16 md:py-24 px-4 md:px-6">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
@@ -79,7 +74,7 @@ export default function HomePage() {
         <div className="h-px bg-slate-200 dark:bg-slate-800 max-w-4xl mx-auto" />
       </div>
 
-      {/* Education Section - タイムラインスタイル */}
+      {/* Education Section */}
       <section id="education" className="py-16 md:py-24 px-4 md:px-6">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
@@ -142,7 +137,7 @@ export default function HomePage() {
         <div className="h-px bg-slate-200 dark:bg-slate-800 max-w-4xl mx-auto" />
       </div>
 
-      {/* Hobbies Section - シンプルなグリッド */}
+      {/* Hobbies Section */}
       <section id="hobbies" className="py-16 md:py-24 px-4 md:px-6">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
@@ -192,54 +187,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Contact Section - アイコンのみのシンプルなソーシャルリンク */}
-      <section id="contact" className="py-16 md:py-24 px-4 md:px-6 bg-slate-900 dark:bg-black">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl font-semibold mb-4 text-white">Get in Touch</h2>
-            <p className="text-lg mb-8 text-slate-400">お気軽にご連絡ください</p>
-
-            <div className="flex items-center justify-center gap-6">
-              <a
-                href="https://github.com/Ry0Nang"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-14 h-14 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition-all duration-200 hover:scale-110"
-                aria-label="GitHub"
-              >
-                <Github className="h-6 w-6 text-white" />
-              </a>
-              <a
-                href="https://instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-14 h-14 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition-all duration-200 hover:scale-110"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-6 w-6 text-white" />
-              </a>
-              <a
-                href="https://x.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-14 h-14 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition-all duration-200 hover:scale-110"
-                aria-label="X (Twitter)"
-              >
-                <svg viewBox="0 0 24 24" className="h-6 w-6 text-white fill-current" aria-hidden="true">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-8 px-4 md:px-6 bg-slate-950 dark:bg-black border-t border-slate-800">
-        <div className="container mx-auto text-center">
-          <p className="text-sm text-slate-500">© 2025 Ryota Nagayama</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

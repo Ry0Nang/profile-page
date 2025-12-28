@@ -44,19 +44,15 @@ export function ThemeToggle() {
   }
 
   if (!mounted) {
-    return (
-      <div className="fixed top-6 right-6 z-50">
-        <div className="rounded-full w-12 h-12 bg-slate-200 dark:bg-slate-700 animate-pulse" />
-      </div>
-    )
+    return <div className="rounded-full w-10 h-10 bg-slate-200 dark:bg-slate-700 animate-pulse" />
   }
 
   const currentIcon = resolvedTheme === "dark" ? Moon : Sun
 
   return (
-    <div className="fixed top-6 right-6 z-50">
+    <div className="relative">
       {previewTheme && (
-        <div className="mb-4 bg-white dark:bg-slate-800 rounded-xl p-4 shadow-lg border border-slate-200 dark:border-slate-700">
+        <div className="absolute top-14 right-0 bg-white dark:bg-slate-800 rounded-xl p-4 shadow-lg border border-slate-200 dark:border-slate-700 min-w-48">
           <p className="text-sm text-slate-700 dark:text-slate-300 mb-3">
             プレビュー中: {previewTheme === "light" ? "ライト" : previewTheme === "dark" ? "ダーク" : "システム"}テーマ
           </p>
@@ -85,7 +81,7 @@ export function ThemeToggle() {
           <Button
             variant="outline"
             size="icon"
-            className="rounded-full w-12 h-12 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300"
+            className="rounded-full w-10 h-10 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all duration-300"
           >
             {currentIcon === Sun && <Sun className="h-5 w-5 text-slate-700 dark:text-slate-300" />}
             {currentIcon === Moon && <Moon className="h-5 w-5 text-slate-700 dark:text-slate-300" />}
