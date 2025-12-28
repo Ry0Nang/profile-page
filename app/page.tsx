@@ -38,27 +38,8 @@ export default function HomePage() {
                 </p>
 
                 <div className="flex gap-4 justify-center md:justify-start flex-col sm:flex-row">
-                  <Button
-                    size="lg"
-                    className="rounded-lg px-6 py-3 text-base font-medium bg-slate-900 hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100 transition-all duration-200"
-                    asChild
-                  >
-                    <a href="https://github.com/Ry0Nang" target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-2 h-5 w-5" />
-                      GitHub
-                    </a>
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="rounded-lg px-6 py-3 text-base font-medium border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200 bg-transparent"
-                    asChild
-                  >
-                    <a href="#contact">
-                      <Mail className="mr-2 h-5 w-5" />
-                      Contact
-                    </a>
-                  </Button>
+                  
+                  
                 </div>
               </div>
             </div>
