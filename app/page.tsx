@@ -1,211 +1,208 @@
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Github, MapPin, Calendar, Heart, ExternalLink, Mail } from "lucide-react"
+import { Github, ExternalLink, Mail, GraduationCap, Briefcase, Coffee, Car, Activity } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-teal-50 dark:from-slate-900 dark:via-purple-900 dark:to-slate-800 transition-colors duration-300">
-      {/* Theme Toggle */}
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 transition-colors duration-300">
       <ThemeToggle />
 
-      {/* Hero Section */}
-      <section className="py-16 md:py-24 px-4 md:px-6">
-        <div className="container mx-auto text-center">
+      {/* Hero Section - より洗練されたデザインに */}
+      <section className="py-20 md:py-32 px-4 md:px-6">
+        <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            {/* Profile Avatar Placeholder */}
-            <div className="w-32 h-32 bg-gradient-to-br from-purple-400 to-blue-500 dark:from-purple-500 dark:to-blue-600 rounded-full mx-auto mb-8 shadow-lg flex items-center justify-center">
-              <span className="text-4xl font-bold text-white">RN</span>
-            </div>
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+              <div className="w-36 h-36 md:w-44 md:h-44 bg-slate-800 dark:bg-slate-200 rounded-full flex-shrink-0 shadow-2xl flex items-center justify-center ring-4 ring-slate-200 dark:ring-slate-700">
+                <span className="text-4xl md:text-5xl font-semibold text-white dark:text-slate-800">RN</span>
+              </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">
-              長山凌汰
-            </h1>
-            <h2 className="text-3xl text-slate-700 dark:text-slate-300 mb-8 font-medium">Ryota Nagayama</h2>
+              <div className="text-center md:text-left">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-2 tracking-tight">
+                  長山凌汰
+                </h1>
+                <h2 className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 mb-4 font-medium tracking-wide">
+                  Ryota Nagayama
+                </h2>
 
-            <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-3xl p-6 shadow-lg border border-white/20 dark:border-slate-700/20 mb-8 inline-block">
-              <div className="flex items-center justify-center gap-3">
-                <MapPin className="h-6 w-6 text-purple-600 dark:text-purple-400" />
-                <span className="text-xl text-slate-700 dark:text-slate-300 font-medium">
-                  UC Berkeley, Environmental Economics & Policy
-                </span>
+                <div className="flex items-center justify-center md:justify-start gap-2 mb-6">
+                  <GraduationCap className="h-5 w-5 text-slate-600 dark:text-slate-400" />
+                  <span className="text-lg text-slate-600 dark:text-slate-400">
+                    UC Berkeley | Environmental Economics & Policy
+                  </span>
+                </div>
+
+                <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed max-w-xl">
+                  環境経済学と政策を学ぶ学生として、持続可能な未来の創造に貢献したいと考えています。
+                </p>
+
+                <div className="flex gap-4 justify-center md:justify-start flex-col sm:flex-row">
+                  <Button
+                    size="lg"
+                    className="rounded-lg px-6 py-3 text-base font-medium bg-slate-900 hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100 transition-all duration-200"
+                    asChild
+                  >
+                    <a href="https://github.com/Ry0Nang" target="_blank" rel="noopener noreferrer">
+                      <Github className="mr-2 h-5 w-5" />
+                      GitHub
+                    </a>
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="rounded-lg px-6 py-3 text-base font-medium border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200 bg-transparent"
+                    asChild
+                  >
+                    <a href="#contact">
+                      <Mail className="mr-2 h-5 w-5" />
+                      Contact
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <p className="text-2xl text-slate-600 dark:text-slate-400 mb-12 leading-relaxed max-w-3xl mx-auto">
-              環境経済学と政策を学ぶ学生として、持続可能な未来の創造に貢献したいと考えています。
-            </p>
+      {/* Divider */}
+      <div className="container mx-auto px-4">
+        <div className="h-px bg-slate-200 dark:bg-slate-800 max-w-4xl mx-auto" />
+      </div>
 
-            <div className="flex gap-6 justify-center flex-col sm:flex-row">
-              <Button
-                size="lg"
-                className="rounded-full px-8 py-4 text-lg font-medium bg-purple-600 hover:bg-purple-700 dark:bg-purple-500 dark:hover:bg-purple-600 shadow-lg hover:shadow-xl transition-all duration-300"
-                asChild
-              >
-                <a href="https://github.com/Ry0Nang" target="_blank" rel="noopener noreferrer">
-                  <Github className="mr-3 h-5 w-5" />
-                  GitHub
-                </a>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="rounded-full px-8 py-4 text-lg font-medium border-2 border-purple-200 dark:border-purple-700 text-purple-700 dark:text-purple-300 hover:bg-purple-50 dark:hover:bg-purple-900/20 shadow-lg hover:shadow-xl transition-all duration-300 bg-transparent"
-                asChild
-              >
-                <a href="#contact">
-                  <Mail className="mr-3 h-5 w-5" />
-                  連絡する
-                </a>
-              </Button>
+      {/* About Section - よりクリーンなレイアウト */}
+      <section id="about" className="py-16 md:py-24 px-4 md:px-6">
+        <div className="container mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center gap-3 mb-8">
+              <Briefcase className="h-6 w-6 text-slate-700 dark:text-slate-300" />
+              <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">About</h2>
+            </div>
+            <div className="space-y-6">
+              <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                茨城県出身の長山凌汰です。現在はUC Berkeleyで環境経済学と政策を専攻しており、
+                環境問題と経済の関係について深く学んでいます。
+              </p>
+              <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                持続可能な社会の実現に向けて、経済学の視点から環境問題にアプローチし、
+                将来的には政策立案や研究分野で貢献したいと考えています。
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-12 md:py-20 px-4 md:px-6">
-        <div className="container mx-auto">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16 text-slate-900 dark:text-white">自己紹介</h2>
-            <Card className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-3xl shadow-xl border-0 overflow-hidden">
-              <CardContent className="p-6 md:p-12">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <p className="text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-8">
-                      茨城県出身の長山凌汰です。現在はUC Berkeleyで環境経済学と政策を専攻しており、
-                      環境問題と経済の関係について深く学んでいます。
-                    </p>
-                    <p className="text-xl text-slate-700 dark:text-slate-300 leading-relaxed">
-                      持続可能な社会の実現に向けて、経済学の視点から環境問題にアプローチし、
-                      将来的には政策立案や研究分野で貢献したいと考えています。
-                    </p>
-                  </div>
-                  <div className="bg-gradient-to-br from-teal-100 to-blue-100 dark:from-teal-900/30 dark:to-blue-900/30 rounded-3xl p-8 text-center">
-                    <div className="text-6xl mb-4">🌱</div>
-                    <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-200 mb-2">持続可能な未来</h3>
-                    <p className="text-slate-600 dark:text-slate-400">環境と経済の調和を目指して</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      {/* Divider */}
+      <div className="container mx-auto px-4">
+        <div className="h-px bg-slate-200 dark:bg-slate-800 max-w-4xl mx-auto" />
+      </div>
 
-      {/* Education Section */}
-      <section
-        id="education"
-        className="py-12 md:py-20 px-4 md:px-6 bg-gradient-to-r from-blue-50/50 to-purple-50/50 dark:from-slate-800/50 dark:to-purple-900/20"
-      >
+      {/* Education Section - タイムラインスタイル */}
+      <section id="education" className="py-16 md:py-24 px-4 md:px-6">
         <div className="container mx-auto">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16 text-slate-900 dark:text-white">経歴</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center gap-3 mb-12">
+              <GraduationCap className="h-6 w-6 text-slate-700 dark:text-slate-300" />
+              <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">Education</h2>
+            </div>
+
             <div className="space-y-8">
-              <Card className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-3xl shadow-xl border-0 overflow-hidden hover:shadow-2xl transition-all duration-300">
-                <CardHeader className="bg-gradient-to-r from-purple-500 to-blue-500 dark:from-purple-600 dark:to-blue-600 text-white p-8">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Calendar className="h-6 w-6" />
-                    <CardTitle className="text-xl md:text-2xl font-bold">2025年8月 - 現在</CardTitle>
-                  </div>
-                  <CardDescription className="text-purple-100 dark:text-purple-200 text-xl">
-                    University of California, Berkeley
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="p-4 md:p-8">
-                  <Badge className="mb-4 px-4 py-2 text-lg bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200 rounded-full">
-                    Environmental Economics & Policy
-                  </Badge>
-                  <p className="text-lg text-slate-700 dark:text-slate-300">
-                    環境経済学と政策を専攻し、持続可能な発展について学んでいます。
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="relative pl-8 border-l-2 border-slate-300 dark:border-slate-700">
+                <div className="absolute -left-2 top-1 w-4 h-4 bg-slate-900 dark:bg-white rounded-full" />
+                <div className="mb-1">
+                  <span className="text-sm font-medium text-slate-500 dark:text-slate-500">2025年8月 - 現在</span>
+                </div>
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-1">
+                  University of California, Berkeley
+                </h3>
+                <Badge
+                  variant="secondary"
+                  className="mb-3 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300"
+                >
+                  Environmental Economics & Policy
+                </Badge>
+                <p className="text-slate-600 dark:text-slate-400">
+                  環境経済学と政策を専攻し、持続可能な発展について学んでいます。
+                </p>
+              </div>
 
-              <Card className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-3xl shadow-xl border-0 overflow-hidden hover:shadow-2xl transition-all duration-300">
-                <CardHeader className="bg-gradient-to-r from-teal-500 to-green-500 dark:from-teal-600 dark:to-green-600 text-white p-8">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Calendar className="h-6 w-6" />
-                    <CardTitle className="text-xl md:text-2xl font-bold">2023年8月 - 2025年8月</CardTitle>
-                  </div>
-                  <CardDescription className="text-teal-100 dark:text-teal-200 text-xl">
-                    Diablo Valley College
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="p-4 md:p-8">
-                  <Badge className="mb-4 px-4 py-2 text-lg bg-teal-100 dark:bg-teal-900/50 text-teal-800 dark:text-teal-200 rounded-full">
-                    Economics Major
-                  </Badge>
-                  <p className="text-lg text-slate-700 dark:text-slate-300">
-                    経済学を専攻し、UC Berkeleyへの編入を目指して学習しました。
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="relative pl-8 border-l-2 border-slate-300 dark:border-slate-700">
+                <div className="absolute -left-2 top-1 w-4 h-4 bg-slate-400 dark:bg-slate-600 rounded-full" />
+                <div className="mb-1">
+                  <span className="text-sm font-medium text-slate-500 dark:text-slate-500">2023年8月 - 2025年8月</span>
+                </div>
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-1">Diablo Valley College</h3>
+                <Badge
+                  variant="secondary"
+                  className="mb-3 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300"
+                >
+                  Economics Major
+                </Badge>
+                <p className="text-slate-600 dark:text-slate-400">
+                  経済学を専攻し、UC Berkeleyへの編入を目指して学習しました。
+                </p>
+              </div>
 
-              <Card className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-3xl shadow-xl border-0 overflow-hidden hover:shadow-2xl transition-all duration-300">
-                <CardHeader className="bg-gradient-to-r from-orange-400 to-pink-400 dark:from-orange-500 dark:to-pink-500 text-white p-8">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Calendar className="h-6 w-6" />
-                    <CardTitle className="text-xl md:text-2xl font-bold">2002年4月</CardTitle>
-                  </div>
-                  <CardDescription className="text-orange-100 dark:text-orange-200 text-xl">
-                    茨城県で生まれる
-                  </CardDescription>
-                </CardHeader>
-              </Card>
+              <div className="relative pl-8 border-l-2 border-transparent">
+                <div className="absolute -left-2 top-1 w-4 h-4 bg-slate-300 dark:bg-slate-700 rounded-full" />
+                <div className="mb-1">
+                  <span className="text-sm font-medium text-slate-500 dark:text-slate-500">2002年4月</span>
+                </div>
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-white">茨城県で生まれる</h3>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Hobbies Section */}
-      <section id="hobbies" className="py-12 md:py-20 px-4 md:px-6">
+      {/* Divider */}
+      <div className="container mx-auto px-4">
+        <div className="h-px bg-slate-200 dark:bg-slate-800 max-w-4xl mx-auto" />
+      </div>
+
+      {/* Hobbies Section - シンプルなグリッド */}
+      <section id="hobbies" className="py-16 md:py-24 px-4 md:px-6">
         <div className="container mx-auto">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16 text-slate-900 dark:text-white">趣味</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-3xl shadow-xl border-0 overflow-hidden hover:shadow-2xl transition-all duration-300 group">
-                <CardHeader className="p-8 text-center">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-red-400 to-pink-500 dark:from-red-500 dark:to-pink-600 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Heart className="h-10 w-10 text-white" />
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center gap-3 mb-12">
+              <Activity className="h-6 w-6 text-slate-700 dark:text-slate-300" />
+              <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">Interests</h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Card className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-lg flex items-center justify-center mb-4">
+                    <Activity className="h-6 w-6 text-slate-700 dark:text-slate-300" />
                   </div>
-                  <CardTitle className="text-2xl font-bold text-slate-800 dark:text-slate-200">バドミントン</CardTitle>
-                </CardHeader>
-                <CardContent className="px-8 pb-8">
-                  <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed text-center">
-                    学生時代から続けているスポーツで、体力維持とストレス発散に役立っています。
-                    戦略性と瞬発力が求められるところが魅力です。
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">バドミントン</h3>
+                  <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    学生時代から続けているスポーツ。戦略性と瞬発力が求められるところが魅力です。
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-3xl shadow-xl border-0 overflow-hidden hover:shadow-2xl transition-all duration-300 group">
-                <CardHeader className="p-8 text-center">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-blue-400 to-cyan-500 dark:from-blue-500 dark:to-cyan-600 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-3xl">🚗</span>
+              <Card className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-lg flex items-center justify-center mb-4">
+                    <Car className="h-6 w-6 text-slate-700 dark:text-slate-300" />
                   </div>
-                  <CardTitle className="text-2xl font-bold text-slate-800 dark:text-slate-200">ドライブ</CardTitle>
-                </CardHeader>
-                <CardContent className="px-8 pb-8">
-                  <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed text-center">
-                    新しい場所を探索したり、自然の中をドライブすることでリフレッシュしています。
-                    カリフォルニアの美しい景色を楽しんでいます。
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">ドライブ</h3>
+                  <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    新しい場所を探索したり、カリフォルニアの美しい景色を楽しんでいます。
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-3xl shadow-xl border-0 overflow-hidden hover:shadow-2xl transition-all duration-300 group">
-                <CardHeader className="p-8 text-center">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-amber-400 to-orange-500 dark:from-amber-500 dark:to-orange-600 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-3xl">☕</span>
+              <Card className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-lg flex items-center justify-center mb-4">
+                    <Coffee className="h-6 w-6 text-slate-700 dark:text-slate-300" />
                   </div>
-                  <CardTitle className="text-2xl font-bold text-slate-800 dark:text-slate-200">カフェ巡り</CardTitle>
-                </CardHeader>
-                <CardContent className="px-8 pb-8">
-                  <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed text-center">
-                    新しいカフェを訪れて、美味しいコーヒーと心地よい空間を楽しんでいます。
-                    勉強や読書の場所としても活用しています。
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">カフェ巡り</h3>
+                  <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    新しいカフェを訪れて、勉強や読書の場所としても活用しています。
                   </p>
                 </CardContent>
               </Card>
@@ -214,36 +211,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section
-        id="contact"
-        className="py-12 md:py-20 px-4 md:px-6 bg-gradient-to-br from-slate-800 via-slate-900 to-purple-900 dark:from-slate-900 dark:via-black dark:to-purple-950"
-      >
+      {/* Contact Section - ミニマルデザイン */}
+      <section id="contact" className="py-16 md:py-24 px-4 md:px-6 bg-slate-900 dark:bg-black">
         <div className="container mx-auto">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-8 text-white">連絡先</h2>
-            <p className="text-2xl mb-12 text-slate-300 dark:text-slate-400">お気軽にご連絡ください</p>
-            <div className="flex justify-center">
-              <Button
-                size="lg"
-                className="rounded-full px-8 py-4 md:px-12 md:py-6 text-lg md:text-xl font-medium bg-white dark:bg-slate-200 text-slate-900 dark:text-slate-800 hover:bg-slate-100 dark:hover:bg-slate-300 shadow-2xl hover:shadow-3xl transition-all duration-300"
-                asChild
-              >
-                <a href="https://github.com/Ry0Nang" target="_blank" rel="noopener noreferrer">
-                  <Github className="mr-4 h-6 w-6" />
-                  GitHub: Ry0nang
-                  <ExternalLink className="ml-4 h-5 w-5" />
-                </a>
-              </Button>
-            </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl font-semibold mb-4 text-white">Get in Touch</h2>
+            <p className="text-lg mb-8 text-slate-400">お気軽にご連絡ください</p>
+            <Button
+              size="lg"
+              variant="outline"
+              className="rounded-lg px-8 py-4 text-base font-medium border-slate-700 text-white hover:bg-slate-800 transition-all duration-200 bg-transparent"
+              asChild
+            >
+              <a href="https://github.com/Ry0Nang" target="_blank" rel="noopener noreferrer">
+                <Github className="mr-2 h-5 w-5" />
+                github.com/Ry0Nang
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 md:px-6 bg-slate-950 dark:bg-black">
+      <footer className="py-8 px-4 md:px-6 bg-slate-950 dark:bg-black border-t border-slate-800">
         <div className="container mx-auto text-center">
-          <p className="text-slate-400 dark:text-slate-500 text-lg">© 2025 Ryota Nagayama. All rights reserved.</p>
+          <p className="text-sm text-slate-500">© 2025 Ryota Nagayama</p>
         </div>
       </footer>
     </div>
